@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+      body {
+    margin: 0;
+    min-height: 100vh;
+      }
+    </style>
+  </head>
+  
+  <body style="background-color: #f1f1f1; background-image: url(galdalf.jpg); background-size: cover;">
+    
+    <p style="position: fixed; left: 0; top: 20px; color: #f1f1f1; background-color: rgba(128,128,128,0.5); border-radius: 0 10px 10px 0; padding: 5px 10px; margin: 0; text-align: left; max-width: 100%;">-A wizard is never late, Frodo Baggins. Nor is he early. He arrives precisely when he means to-</p>
+
+  <div class="welcomewindow" id="window">
+  
+  <p class="windowclose" id="windowclose" draggable="false">X</p>
+  
+  <p class="windowheader" id="windowheader" title="Ventana arrastrable"></p>
+  
+  <h1 style="padding: 6px; margin: 4px; background-color: #d29b4893; color: #ffffff; border-radius: 4px; text-align: center;">Welcome to Middle Earth Os!</h1>
+  
+  <h3 style="padding: 4px; margin: 4px; margin-top: 20px; color:#ffffff; text-align: center; font-size: 1.3em;">Gi nathlam hí</h3>
+  
+  <p style="padding: 4px 4px 4px 4px; margin: -10px 4px 4px 4px; color:#ffffff; text-align: center; font-size: 0.9em;">(You are welcome here)</p>
+
+  </div>
+    <!-- id pluma-template, top -->
+   <div class="window" id="pluma-template" data-template="true" style="display:none; width:360px; height:260px;">
+   
+    <p class="windowclose" draggable="false">X</p>
+   
+    <p class="windowheader" id="pluma-template-header" title="Ventana arrastrable"></p>
+   
+    <h1 style="padding: 4px; margin: 4px; color: #ffffff; text-align: center; background-color: rgba(255,255,255,0.12); border-radius: 8px;">Rivendell Records</h1>
+   
+    <div class="pluma-app" style="display:flex; gap: 8px; padding: 8px; color:#ffffff; height: calc(100% - 80px); box-sizing: border-box;">
+      
+      <div class="pluma-sidebar" style="flex: 0 0 110px; min-width: 110px; background: rgba(255,255,255,0.12); border-radius: 12px; padding: 8px; overflow-y: auto;">
+        
+        <div class="textos">Notas</div>
+       
+        <div class="pluma-note-buttons" style="display: flex; flex-direction: column; gap: 6px;"></div>
+          
+        <div class="pluma-notes-data" style="display:none;">
+            
+          <div class="pluma-note" data-title="Bienvenida al archivo" data-date="17/07/2026">
+              <p class="textos">Bienvenido a <strong>Rivendell Records</strong>. Este es un pequeño cuaderno de notas para guardar ideas, impresiones y recuerdos.</p>
+              <br>
+              <p class="textos">Explora las entradas a la izquierda para ver diferentes momentos y pensamientos.</p>
+            </div>
+            
+            <div class="pluma-note" data-title="Pulso del bosque" data-date="16/07/2026">
+              <p class="textos">Hoy paseo tranquilo entre hojas y luz filtrada. El bosque susurra con cada paso.</p>
+              <br>
+              <p class="textos">Me gusta escribir sobre las sensaciones que deja la naturaleza, el silencio y la calma.</p>
+            </div>
+           
+            <div class="pluma-note" data-title="Fragmento nocturno" data-date="15/07/2026">
+              <blockquote style="background: rgba(255,255,255,0.14); padding: 10px; border-radius: 12px;"><i>La noche trae palabras que el día no quiere escuchar.</i></blockquote>
+              <p class="textos">Una breve reflexión sobre cómo las ideas fluyen mejor bajo la luz tenue.</p>
+            </div>
+          </div>
+        </div>
+       
+        <div class="pluma-content" style="flex: 1; min-width: 0; background: rgba(255,255,255,0.12); border-radius: 12px; padding: 8px; overflow: auto;">
+          
+          <div class="pluma-current-title" style="font-size: 14px; font-weight: 700; margin-bottom: 6px;"></div>
+          
+          <div class="pluma-current-date" style="font-size: 11px; opacity: 0.8; margin-bottom: 8px;"></div>
+          
+          <div class="pluma-current-body" style="font-size: 12px; line-height: 1.4;"></div>
+        </div>    </div>
+
+  </div>
+
+<div class="taskbar" id="taskbar">
+ 
+  <p style="cursor: pointer; margin-left: 8px;" id="windowopen">Middle Earth Os</p>
+ 
+  
+  <p id="clock" style="margin-right: 16px;">Loading current date and time...</p>
+
+  </div>
+
+    <!--debo agregar los iconos dentro de este div, para que se muestren en el escritorio, y para que siempre que se seleccionen aparezca el borde-->
+    <div id="desktopApps" style="padding-top: 64px; padding-left: 16px;">
+  <img src="ojo.jpg"
+       data-href="https://www.youtube.com/watch?v=6dGhy5NzuCE&list=RD6dGhy5NzuCE&start_radio=1"
+       style="width: 50px; height: 50px; border-radius: 10px; object-fit: cover; cursor: pointer; position: relative; left: 12px;"
+       alt="Eye of Sauron">
+     
+     <!-- la parte de position: relative; left: 12px es la que mueve la imagen hacia la derecha, por si la quiero borrar en un futuro -->
+    
+     <p class="textos">Sauron's Eye</p>
+
+     <!-- importante que la imagen tenga la clase app-icon para que se le asignen todas las propiedades -->
+
+    <img src="Pluma.png" class="app-icon" data-window="pluma-template" style="width: 50px; height: 50px; border-radius: 10px; object-fit: cover; cursor: pointer; position: relative; left: 12px; display: block; margin-top: 8px;" alt="Pluma.">
+
+      <p class="textosparaiconos" style="width:50px; margin: 6px 0 0 12px; text-align: center;">Rivendell Records</p>
+    
+
+      </div> 
+
+     </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
