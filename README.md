@@ -1,6 +1,6 @@
 # Middle Earth OS 🧝‍♂️💍
 
-![Beautiful and Magic Web Os](logo.png)
+![Beautiful and Magic Web Os](Captura de pantalla 2026-07-16 115134.png)
 
 As a big fan of The Lord of the Rings, I couldn't resist dedicating my very own space to it! Even though I don't know much about HTML (okay, practically nothing at all 😅), I decided it would be a really fun project to build. 
 
